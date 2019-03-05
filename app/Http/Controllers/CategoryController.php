@@ -146,7 +146,12 @@ class CategoryController extends Controller
 
                 $this->category->addCategory($dataCategory);
 
-            } catch (\Exception $e) {}
+            } catch (\Exception $e) {
+				echo $e->getCode();
+				echo "<br>";
+				echo $e->getMessage();
+				dd('153');
+			}
 
             return redirect()->back()->with('success', 'Успешно добавлено категорию');
         }
