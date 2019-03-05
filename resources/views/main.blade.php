@@ -17,17 +17,15 @@
 
     <div class="home-page-nav">
         @if(count($categorys))
-            <ul>
-                @for($i = 0; $i < count($categorys); $i++)
-                    <li class="col-xs-12 col-sm-6">
-                        <a href="/categorys/{{ $categorys[$i]['slug'] }}" title="{{ $categorys[$i]['slug'] }}">
-                            <img src="/images/categorys/{{ $categorys[$i]['image_name'] }}" alt="{{ $categorys[$i]['image_alt'] }}">
-                            <p>{{ $categorys[$i]['name'] }}</p>
-                        </a>
-                        <p>{{ $categorys[$i]['intro_description'] }}</p>
-                    </li>
-                @endfor
-            </ul>
+			@for($i = 0; $i < count($categorys); $i++)
+				<div style="float: left; width:50%; clear:both; padding-top: 10px;">
+					<img src="/images/categorys/{{ $categorys[$i]['image_name'] }}" alt="{{ $categorys[$i]['image_alt'] }}">
+				</div>
+				<div style="float: left; width:46%; padding:2%;">
+					<a href="/category/{{ $categorys[$i]['slug'] }}" title="{{ $categorys[$i]['slug'] }}"><h3>{{ $categorys[$i]['name'] }}</h3></a>
+					{!! $categorys[$i]['intro_description'] !!}
+				</div>
+			@endfor
         @endif
     </div>
 @endsection

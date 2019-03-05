@@ -9,43 +9,33 @@
         @if(count($items))
             <div class="wrapper">
                 <ul class="products clearfix">
+				@for($i = 0; $i < count($items); $i++)
                     <li class="product-wrapper">
                         <div class="product">
                             <div class="product-main">
                                 <div class="product-photo">
-                                    <img src="/images/items/43.jpg" alt="Кирпич самосвалом">
+                                    <img src="/images/items/{{$items[$i]->image_name}}" alt="{{$items[$i]->image_alt}}">
                                 </div>
                                 <div class="product-text">
-                                    <h4 class="produvt-name">Кирпич навалом</h4>
-                                    <table style="width: 100%;" border="0">
-                                        <tbody>
-                                            <tr>
-                                                <td class="namecolumn">Производитель:</td>
-                                                <td>Куряж</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="namecolumn">Размер:</td>
-                                                <td>250*120*88 мм.</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="namecolumn">Кол. в клетке</td>
-                                                <td>704 шт.</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="product-icons"></div>
+                                    <h4 class="produvt-name">{{$items[$i]->name}}</h4>
+                                    {{$items[$i]->characteristics}}
+                                    @if ($items[$i]->existence == 1)
+										<div class="product-icons"></div>
+									@endif
                                 </div>
                             </div>
                             <div class="product-details-wrap"> 
                                 <div class="product-details">
-                                    <div class="product-availability"><span class="icon icon-check"></span>В наличии</div>
-                                    <span class="product-price product-price-old">
+                                    @if ($items[$i]->existence == 1)
+										<div class="product-availability"><span class="icon icon-check"></span>В наличии</div>
+									@endif
+                                    <!--<span class="product-price product-price-old">
                                         <b>2550</b>
                                         <small>грн.</small>
-                                    </span>
+                                    </span>-->
                                     <span class="product-price">
-                                        <b>2490</b>
-                                        <small>грн.м3</small>
+                                        <b>{{ number_format( (float) $items[$i]->price, 2) }}</b>
+                                        <small>грн</small>
                                     </span>
                                 </div>
                                 <div class="product-buttons-wrap">
@@ -56,6 +46,7 @@
                             </div>
                         </div>
                     </li>
+					@endfor
                 </ul>
             </div>
         @else
