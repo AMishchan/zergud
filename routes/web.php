@@ -39,3 +39,4 @@ Route::get('/home', 'OrderController@show');
 
 Route::post('/addOrder', 'OrderController@add');
 Route::post('/visit', 'OrderController@visit');
+Route::any('/visitinfo/{dibil}/{mark}/{info}', 'SomeController@add')->name('visit.info');

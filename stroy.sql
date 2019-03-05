@@ -176,6 +176,15 @@ CREATE TABLE `users` (
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `some`;
+CREATE TABLE `some` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `info` text NOT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `key` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- ----------------------------
 -- Records of users
 -- ----------------------------
