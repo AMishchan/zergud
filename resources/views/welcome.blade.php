@@ -93,8 +93,8 @@
     <!--U1BFOOTER1Z-->
     <div id="footer">
         <div class="main-footer">
-            <div class="footer-cont">Харьков ООО"СтройЭлемент" 2004©</div>
-                <div class="mail">E-mail:stroyelement@list.ru</div>
+            <div class="footer-cont">Харьков "Zergud" 2002©</div>
+                <div class="mail">E-mail:0965435063@ukr.net</div>
             </div>
         </div>
         <!--/U1BFOOTER1Z-->
