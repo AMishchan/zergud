@@ -91,6 +91,6 @@
         </div>
     </div>
     <script>
-        /*CKEDITOR.replace( 'characteristics' );*/
+        CKEDITOR.replace( 'characteristics' );
     </script>
 @endsection

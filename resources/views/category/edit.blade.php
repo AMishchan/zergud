@@ -80,7 +80,7 @@
     </div>
 
     <script>
-        /*CKEDITOR.replace( 'intro_description' );
-        CKEDITOR.replace( 'full_description' );*/
+        CKEDITOR.replace( 'intro_description' );
+        CKEDITOR.replace( 'full_description' );
     </script>
 @endsection
