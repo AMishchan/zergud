@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('css/my.css') }}?<?php echo time();?>">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/base.css') }}?<?php echo time();?>">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/layer1.css') }}?<?php echo time();?>">
-    
+    <link type="text/css" href="{{ asset('css/bootstrap.min.css') }}?<?php echo time();?>" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/ulightbox.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome/web-fonts-with-css/css/fontawesome-all.css') }}">
     

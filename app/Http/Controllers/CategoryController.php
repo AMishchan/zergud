@@ -185,6 +185,9 @@ class CategoryController extends Controller
 
         unset($request['_token']);
 
+        $request['intro_description'] =  htmlspecialchars($request['intro_description'], ENT_QUOTES);
+        $request['full_description'] =  htmlspecialchars($request['full_description'], ENT_QUOTES);
+
         $validator = Validator::make(
             array(
                 'name'              => trim($request['name']),

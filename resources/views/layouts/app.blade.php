@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome/web-fonts-with-css/css/fontawesome-all.css') }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}?<?php echo time();?>" rel="stylesheet">
-    
+
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery-3.2.1.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
+
+
     
 </head>
 <body>

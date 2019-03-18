@@ -15,15 +15,15 @@
     </p>
     <h1>Строительные Материалы:</h1>
 
-    <div class="home-page-nav">
+    <div class="container home-page-nav">
         @if(count($categorys))
 			@for($i = 0; $i < count($categorys); $i++)
-				<div style="float: left; width:50%; clear:both; padding-top: 10px;">
+				<div class="row main-page-category-img">
 					<img src="/images/categorys/{{ $categorys[$i]['image_name'] }}" alt="{{ $categorys[$i]['image_alt'] }}">
 				</div>
-				<div style="float: left; width:46%; padding:2%;">
+				<div class="row main-page-category-full-desc">
 					<a href="/category/{{ $categorys[$i]['slug'] }}" title="{{ $categorys[$i]['slug'] }}"><h3>{{ $categorys[$i]['name'] }}</h3></a>
-					{!! $categorys[$i]['intro_description'] !!}
+					{!! htmlspecialchars_decode($categorys[$i]['intro_description']) !!}
 				</div>
 			@endfor
         @endif

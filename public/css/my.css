@@ -2053,3 +2053,12 @@ label.btn.change span {
  width: 20%;
  }
 }
+.produvt-name{
+ height: 3em;
+}
+#textBlock img {
+ margin: 15px;
+}
+.product-description p{
+ height: 1.2em !important;
+}

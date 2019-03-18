@@ -225,6 +225,8 @@ class ItemController extends Controller
 
         unset($request['_token']);
 
+        $request['characteristics'] =  htmlspecialchars($request['characteristics'], ENT_QUOTES);
+        
         $validator = Validator::make(
             array(
                 'name'            => trim($request['name']),
